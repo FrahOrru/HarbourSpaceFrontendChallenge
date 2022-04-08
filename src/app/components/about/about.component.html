@@ -1,1 +1,97 @@
-<p>about works!</p>
+<mat-grid-list cols="2">
+    <mat-grid-tile >
+        <img class="pattern-circle" src="../../../assets/img/PatternCircle.png" alt="">
+        <div class="person-picture">
+            <img src="../../../assets/img/edit2 1.png" alt="">
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div fxLayout="row" fxLayoutAlign="center" class="right-container">
+            <div fxLayout="row">
+                <h1 class="about-right-title">About the apprenticeship</h1>
+            </div>
+            <div  fxLayout="row" class="about-right-paragraph">
+                <p>Our scholarships are designed to give talented and driven young people from any background access to top-class education, experience and network. We offer a fully-funded master’s degree alongside an apprenticeship and a guaranteed job upon graduation.</p>
+            </div>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="3" gutterSize="0" rowHeight="300px" class="about-cards-section">
+
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
+        <div class="scholarship">
+            <div fxLayout="row" fxLayoutAlign="center" class="scholarship-value">
+                <div class="scholarship-value-title">
+                    <p>Scholarship value</p>
+                </div>
+                <div fxLayout="row" class="scholarship-value-price">
+                    <h1 class="">€31,300</h1>
+                </div>
+            </div>
+
+            <hr>
+
+            <div fxLayout="row" class="scholarship-value-bottom">
+                <mat-grid-list cols="2" fxLayoutAlign="start" rowHeight="90px">
+                    <mat-grid-tile>
+                        <p><span>Tuition covered</span><br>€20,900</p>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <p><span>Remaining</span><br>€2,000</p>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="2" [rowspan]="1">
+                        <p><span>Living stipend</span><br>€8,400 (€700/month)</p>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+    </mat-grid-tile>
+    
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <div fxLayout="row" fxLayoutAlign="center" class="study-commitment-section">
+            <div class="study-commitment-title">
+                <p>Study commitment</p>
+            </div>
+            <div fxLayout="row">
+                <h1 class="study-commitment-time">3 hours / day</h1>
+            </div>
+            <div  fxLayout="row" class="study-commitment-paragraph">
+                <p>You will complete 15 modules to graduate. Daily classes are 3 hours, plus coursework to complete in your own time.
+                </p>
+            </div>
+        </div>
+    </mat-grid-tile>
+    
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <div fxLayout="row" fxLayoutAlign="center" class="work-commitment-section">
+            <div class="work-commitment-title">
+                <p>Work commitment</p>
+            </div>
+            <div fxLayout="row">
+                <h1 class="work-commitment-time">4 hours / day</h1>
+            </div>
+            <div  fxLayout="row" class="work-commitment-paragraph">
+                <p>Immerse yourself in the professional world during your apprenticeship. You’ll learn the ropes from the best and get to apply your newly acquired knowledge in the field from day one.
+                </p>
+            </div>
+        </div>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <div fxLayout="row" fxLayoutAlign="center" class="after-graduation-section">
+            <div class="after-graduation-title">
+                <p>A full-time contract</p>
+            </div>
+            <div fxLayout="row">
+                <h1 class="after-graduation-time">1 Year / Full-Time</h1>
+            </div>
+            <div  fxLayout="row" class="after-graduation-paragraph">
+                <p>You’ll be guaranteed a 1 year contract with SCG upon graduation.
+                </p>
+            </div>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
