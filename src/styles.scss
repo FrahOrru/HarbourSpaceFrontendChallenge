@@ -3,5 +3,5 @@
 
 @font-face {font-family: "Apercu Pro"; src: url("//db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.eot"); src: url("//db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.woff") format("woff"), url("//db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.svg#Apercu Pro") format("svg"); }
 
-html, body { height: 100%; }
+html, body { height: 100%; overflow-x: hidden; }
 body { margin: 0; font-family: Apercu Pro; background-color: white;}
