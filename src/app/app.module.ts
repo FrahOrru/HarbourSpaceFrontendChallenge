@@ -15,6 +15,8 @@ import { FaqComponent } from './components/faq/faq.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import { IntroComponent } from './components/intro/intro.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { IntroComponent } from './components/intro/intro.component';
     IntroComponent,
     SlideCardComponent,
     AboutComponent,
-    FaqComponent
+    FaqComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { IntroComponent } from './components/intro/intro.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
