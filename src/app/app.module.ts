@@ -9,10 +9,12 @@ import { FrontendChallengeEffects } from './store/app.effects';
 import { frontendChallengeReducer } from './store/app.reducer';
 import { ApiService } from './app-service/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IntroComponent } from './components/intro/intro.component';
 import { SlideCardComponent } from './components/slide-card/slide-card.component';
 import { AboutComponent } from './components/about/about.component';
 import { FaqComponent } from './components/faq/faq.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
+import { IntroComponent } from './components/intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FaqComponent } from './components/faq/faq.component';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
