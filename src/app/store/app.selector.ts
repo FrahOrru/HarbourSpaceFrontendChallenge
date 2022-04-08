@@ -7,5 +7,10 @@ export const getAppState = (state: FrontendChallenge) => state;
 
 export const getReactDeveloperApprenticeshipPhazero = createSelector(
     getAppState,
-    (state: FrontendChallenge) => state
+    (state: FrontendChallenge) => state.reactDeveloperApprenticeshipPhazero
+)
+
+export const getScholarship = createSelector(
+    getAppState,
+    (state: FrontendChallenge) => state.reactDeveloperApprenticeshipPhazero.scholarship
 )

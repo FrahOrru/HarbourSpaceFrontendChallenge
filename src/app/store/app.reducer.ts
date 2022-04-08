@@ -1,14 +1,19 @@
 import { ActionReducer, createReducer, on } from "@ngrx/store"
 import * as AppActions from './app.actions';
+import { ApprenticeshipPhazero, Scholarship } from '../interface/apprenticeShipPhazero.interfece';
 
 export interface FrontendChallenge {
     loading: boolean;
-    reactDeveloperApprenticeshipPhazero: any;
+    reactDeveloperApprenticeshipPhazero: ApprenticeshipPhazero;
 }
 
 export const initialState: FrontendChallenge = {
     loading: false,
-    reactDeveloperApprenticeshipPhazero: null
+    reactDeveloperApprenticeshipPhazero: {
+        scholarship: {
+            
+        }
+    } as ApprenticeshipPhazero,
 }
 
 export const frontendChallengeReducer: ActionReducer<FrontendChallenge> = createReducer(
@@ -16,4 +21,5 @@ export const frontendChallengeReducer: ActionReducer<FrontendChallenge> = create
     on(AppActions.reactDeveloperApprenticeshipPhazero, (state: FrontendChallenge) => ({...state, loading: true})),
     on(AppActions.SuccessReactDeveloperApprenticeshipPhazero, (state: FrontendChallenge, { response }) => ({ ...state, loading: false, reactDeveloperApprenticeshipPhazero: response })),
     on(AppActions.FailedReactDeveloperApprenticeshipPhazero, (state: FrontendChallenge) => ({ ...state, loading: false }))
+
 )
