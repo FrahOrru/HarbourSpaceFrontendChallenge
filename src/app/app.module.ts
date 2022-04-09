@@ -17,6 +17,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { IntroComponent } from './components/intro/intro.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,
     MatGridListModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatDividerModule,
+    CarouselModule,
+    MatIconModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
