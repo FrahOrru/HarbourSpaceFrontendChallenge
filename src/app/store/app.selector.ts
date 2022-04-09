@@ -9,8 +9,3 @@ export const getReactDeveloperApprenticeshipPhazero = createSelector(
     getAppState,
     (state: FrontendChallenge) => state.reactDeveloperApprenticeshipPhazero
 )
-
-export const getScholarship = createSelector(
-    getAppState,
-    (state: FrontendChallenge) => state.reactDeveloperApprenticeshipPhazero.scholarship
-)
