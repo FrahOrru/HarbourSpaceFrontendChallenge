@@ -1,0 +1,83 @@
+
+.slide-cards-component {
+  position: relative;
+  .pattern-carousel {
+    position: absolute;
+    top: -20%;
+    left: 12%;
+  }
+  
+}
+
+.example-card {
+    width: 800px;
+    height: 459.92px;
+    background-color:#FBFBFB;
+    padding: 0;
+
+  .example-header-image {
+    background-image: url('../../../assets/img/img-user.png');
+    background-size: cover;
+  }
+  mat-card-header {
+      background-color: white;
+      padding: 16px 16px 0 16px;
+  }
+  mat-card-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    
+    letter-spacing: -0.145455px;
+    
+    color: #535353;
+  }
+
+  mat-card-subtitle {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    
+    letter-spacing: -0.16px;
+    
+    color: #535353;
+  }
+
+  .card-content {
+    padding: 15% 5% 5% 5%;
+
+      .card-main-paragraph {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 35px;
+        
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.185714px;
+        
+        color: #6A6A6A;
+      }
+
+      .card-sub-paragraph {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        
+        letter-spacing: -0.16px;
+        
+        color: #535353;
+      }
+  }
+}
+
+.container mat-card {
+    transition: all .3s ease;
+}
+.owl-carousel {
+  display: inline-flex;
+  justify-content: center;
+}
