@@ -21,6 +21,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     MatDividerModule,
     CarouselModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatMenuModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

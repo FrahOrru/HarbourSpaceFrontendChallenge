@@ -1,1 +1,65 @@
-<p>faq works!</p>
+<mat-grid-list cols="2" rowHeight="300px" class="faq-header">
+    <mat-grid-tile class="faq-title">
+        <h1>Frequently asked questions</h1>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="faq-selection">
+        <p class="filterBy">Filter by:</p>
+
+        <div class="typeSelection">
+            <button (click)="onSelection()" class="dropbtn" id="dropbtn">
+                <p>Dropdown</p>
+                <mat-icon *ngIf="!dropdownOpen">expand_more</mat-icon>
+                <mat-icon *ngIf="dropdownOpen">expand_less</mat-icon>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <div>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>
+
+<mat-divider></mat-divider>
+
+<div class="accordion-pannel">
+    <mat-accordion>
+        <mat-expansion-panel hideToggle="true">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Program conditions
+                </mat-panel-title>
+                <mat-panel-description>
+                    <p>What are my obligations?</p>
+                    <div class="button" id="button">
+                        <div class="css-button" id="css-button"></div>
+                    </div>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <p class="pannel-content-text">
+                The majority of our students receive numerous job offers at the end of the second academic year
+                of their Bachelor's programme and at the end of the first academic year of their Master's
+                programme. The best applicants receive an offer from our industrial partners at the beginning of
+                their programmes.
+                Harbour.Space is highly recognized among innovative employers and is strategic partner of
+                B.Grimm multi- industry corporation with 140 years of history in Thailand. Together we insure
+                students get the best knowledge about the current job market opportunities.
+                We offer our students paid internships options during studies jointly with our industrial
+                partners.
+                Employers that hired graduates of Harbour.Space in the past include Google, IBM, Accenture,
+                Typeform, Frog, and other tech centric companies. Our industry specific employability report
+                could be provided to you separately during the admission process.</p>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-divider></mat-divider>
+
+</div>
