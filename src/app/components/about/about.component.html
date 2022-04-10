@@ -1,4 +1,4 @@
-<mat-grid-list cols="2">
+<mat-grid-list [cols]="columnFirstGrid" [rowHeight]="rowHeightFirstGrid">
     <mat-grid-tile >
         <img class="pattern-circle" src="../../../assets/img/PatternCircle.png" alt="">
         <div class="person-picture">
@@ -18,7 +18,7 @@
   </mat-grid-list>
 
 
-  <mat-grid-list cols="3" gutterSize="0" rowHeight="300px" class="about-cards-section">
+  <mat-grid-list [cols]="columnSecondGrid" gutterSize="0" [rowHeight]="rowHeightSecondGrid" class="about-cards-section">
 
     <mat-grid-tile [colspan]="1" [rowspan]="2">
         <div class="scholarship">
