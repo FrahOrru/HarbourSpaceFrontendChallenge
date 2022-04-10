@@ -11,7 +11,7 @@
                 <h1 class="about-right-title">About the apprenticeship</h1>
             </div>
             <div  fxLayout="row" class="about-right-paragraph">
-                <p>Our scholarships are designed to give talented and driven young people from any background access to top-class education, experience and network. We offer a fully-funded master’s degree alongside an apprenticeship and a guaranteed job upon graduation.</p>
+                <p>{{ (about$ | async)?.data}}</p>
             </div>
         </div>
     </mat-grid-tile>
@@ -27,7 +27,7 @@
                     <p>Scholarship value</p>
                 </div>
                 <div fxLayout="row" class="scholarship-value-price">
-                    <h1 class="">€31,300</h1>
+                    <h1 class="">€ {{ (scholarship$ | async )?.total_value}}</h1>
                 </div>
             </div>
 
@@ -36,13 +36,13 @@
             <div fxLayout="row" class="scholarship-value-bottom">
                 <mat-grid-list cols="2" fxLayoutAlign="start" rowHeight="90px">
                     <mat-grid-tile>
-                        <p><span>Tuition covered</span><br>€20,900</p>
+                        <p><span>Tuition covered</span><br>€ {{ (scholarship$ | async )?.tuition}}</p>
                     </mat-grid-tile>
                     <mat-grid-tile>
-                        <p><span>Remaining</span><br>€2,000</p>
+                        <p><span>Remaining</span><br>€ {{ (scholarship$ | async )?.remaining}}</p>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2" [rowspan]="1">
-                        <p><span>Living stipend</span><br>€8,400 (€700/month)</p>
+                        <p><span>Living stipend</span><br>€ {{ (scholarship$ | async )?.stipend_per_year}} (€{{ (scholarship$ | async )?.stipend_per_month}}/month)</p>
                     </mat-grid-tile>
                 </mat-grid-list>
             </div>
@@ -55,10 +55,10 @@
                 <p>Study commitment</p>
             </div>
             <div fxLayout="row">
-                <h1 class="study-commitment-time">3 hours / day</h1>
+                <h1 class="study-commitment-time">{{ (scholarship$ | async )?.study_commitment}} hours / day</h1>
             </div>
             <div  fxLayout="row" class="study-commitment-paragraph">
-                <p>You will complete 15 modules to graduate. Daily classes are 3 hours, plus coursework to complete in your own time.
+                <p>{{ (scholarship$ | async )?.study_commitment_text}}
                 </p>
             </div>
         </div>
@@ -70,10 +70,10 @@
                 <p>Work commitment</p>
             </div>
             <div fxLayout="row">
-                <h1 class="work-commitment-time">4 hours / day</h1>
+                <h1 class="work-commitment-time">{{ (scholarship$ | async )?.internship_commitment}} hours / day</h1>
             </div>
             <div  fxLayout="row" class="work-commitment-paragraph">
-                <p>Immerse yourself in the professional world during your apprenticeship. You’ll learn the ropes from the best and get to apply your newly acquired knowledge in the field from day one.
+                <p>{{ (scholarship$ | async )?.internship_commitment_text}}
                 </p>
             </div>
         </div>

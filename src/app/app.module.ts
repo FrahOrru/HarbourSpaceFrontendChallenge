@@ -39,7 +39,6 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({app: frontendChallengeReducer}),
     EffectsModule.forRoot([FrontendChallengeEffects]),
     BrowserModule,
     HttpClientModule,
@@ -54,7 +53,7 @@ import { environment } from '../environments/environment';
     MatExpansionModule,
     MatSelectModule,
     MatMenuModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({frontendChallenge: frontendChallengeReducer}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [ApiService],

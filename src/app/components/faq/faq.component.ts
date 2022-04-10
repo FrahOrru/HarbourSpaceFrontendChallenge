@@ -1,6 +1,9 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { on } from '@ngrx/store';
+import { on, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { getFaq } from 'src/app/store/app.selector';
+import { AppState } from '../../store/app.state';
 
 @Component({
   selector: 'app-faq',
@@ -14,16 +17,28 @@ export class FaqComponent implements OnInit {
   selectionForm: FormGroup = new FormGroup({
     typeSelection: new FormControl(1)
   });
+  public faq$: Observable<any>;
 
-  constructor(private render: Renderer2) { }
+  constructor(private render: Renderer2,
+              private _store: Store<AppState>) {
+                this.faq$ = this._store.select(getFaq);
+              }
 
   ngOnInit(): void {
 
-    const element = document.getElementsByClassName('accordion-pannel');
+    const element:any = document.getElementsByClassName('accordion-pannel');
+    let index = 1;
 
-    this.render.listen(element[0], 'click', (target)=>{
-      (document.getElementById('css-button') as HTMLFormElement).classList.toggle("animate");
-    });
+    for(let elem of element) {
+      console.log('elem', elem);
+      this.render.listen(elem, 'click', (target)=>{
+        console.log('css-button' + index);
+        (document.getElementById('css-button' + index) as HTMLFormElement).classList.toggle("animate");
+      });
+      index++;
+
+    }
+    
   }
 
   onSelection() {

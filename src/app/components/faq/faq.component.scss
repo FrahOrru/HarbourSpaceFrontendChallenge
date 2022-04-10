@@ -134,8 +134,10 @@ mat-grid-tile {
 
     mat-panel-description {
         p {
+            width: 700px;
             position: absolute;
             top: 20%;
+            left: 30%;
             font-style: normal;
             font-weight: 500;
             font-size: 20px;
@@ -195,7 +197,7 @@ mat-grid-tile {
 
 
     .pannel-content-text {
-        padding: 2% 10% 4% 42%;
+        padding: 2% 10% 4% 30%;
         overflow: visible;
 
 
