@@ -111,5 +111,8 @@
       }
     }
   },
-  "defaultProject": "frontendChallenge"
+  "defaultProject": "frontendChallenge",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import * as appActions from './store/app.actions';
+import { select, Store } from '@ngrx/store';
+import { getReactDeveloperApprenticeshipPhazero } from './store/app.selector';
+import { Observable } from 'rxjs';
+import { ApprenticeshipPhazero } from './interface/apprenticeShipPhazero.interfece';
+import { FrontendChallenge } from './store/app.reducer';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +12,12 @@ import * as appActions from './store/app.actions';
 })
 export class AppComponent implements OnInit {
   title = 'frontendChallenge';
-  public tryObs$: any;
 
-  constructor(private _store: Store<any>) {}
+  constructor(private _store: Store<any>) {
+
+  }
 
 
   ngOnInit(): void {
-  }
-
-  onClick() {
-    this._store.dispatch(appActions.reactDeveloperApprenticeshipPhazero());
-
   }
 }

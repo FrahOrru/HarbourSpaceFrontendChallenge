@@ -11,6 +11,7 @@ export interface Scholarship {
     id: number;
     name: string;
     description: Description[];
+    company: Company;
 
     location: any;
 
@@ -25,13 +26,53 @@ export interface Scholarship {
     stipend_per_year: number;
     remaining: number;
     study_commitment: number;
+    study_commitment_text: string;
     internship_commitment: number;
+    internship_commitment_text: string;
     credits: number;
     courses: number;
     degree: string;
+    faqs: Faqs;
 }
 
 export interface Description {
     type: 'paragraph' | string;
     data: string;
+}
+
+export interface Company {
+    color: string;
+    color_logo: UrlInfo;
+    description: Description[];
+    id: number;
+    logo_dark: UrlInfo;
+    logo_light: UrlInfo;
+    name: String;
+    photos: Photo[];
+    rank: number;
+    scope: string;
+    type: string;
+    website: string;
+}
+
+export interface UrlInfo {
+    rawFile: any;
+    src: string;
+}
+
+export interface Photo {
+    id: number;
+    name: string;
+    url: string;
+}
+
+export interface Faqs {
+    categories: string[]
+    items: []
+}
+
+export interface FaqsItem {
+    answer: Description[];
+    question: string;
+    type: string;
 }

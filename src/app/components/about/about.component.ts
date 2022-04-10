@@ -1,4 +1,12 @@
+
+import { Store } from '@ngrx/store';
+import { AppState } from '../../store/app.state';
+import { Observable } from 'rxjs';
+import { Description, Scholarship } from '../../interface/apprenticeShipPhazero.interfece';
+import { getAbout } from 'src/app/store/app.selector';
+import { getScholarship } from '../../store/app.selector';
 import { Component, OnInit, HostListener } from '@angular/core';
+
 
 @Component({
   selector: 'app-about',
@@ -6,6 +14,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  public about$: Observable<Description>;
+  public scholarship$: Observable<Scholarship>;
   public screenHeight: any;
   public screenWidth: any;
 
@@ -14,9 +24,13 @@ export class AboutComponent implements OnInit {
   public rowHeightFirstGrid = '900px';
   public rowHeightSecondGrid = '300px';
 
-  constructor() {
+
+  constructor(private _store: Store<AppState>) {
     this.onResize();
+    this.about$ = this._store.select(getAbout);
+    this.scholarship$ = this._store.select(getScholarship);
   }
+
 
   ngOnInit(): void {
   }

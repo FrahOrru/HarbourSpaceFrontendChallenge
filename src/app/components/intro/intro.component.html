@@ -3,18 +3,17 @@
         <div fxLayout="row" fxLayoutAlign="center" class="left-container">
             <img src="../../../assets/img/Icon.png" class="left-icon" alt="Apprenticeship logo">
             <div fxLayout="row">
-                <h1 class="intro-left-title">React Developer Apprenticeship</h1>
+                <h1 class="intro-left-title">{{ (scholarship$ | async)?.name}}</h1>
             </div>
             <div  fxLayout="row" class="intro-left-sub-title">
                 <p>A fully funded work-study program to launch your tech career</p>
             </div>
             <div fxLayout="row" class="intro-left-p-div">
-                <p class="intro-left-paragraph">Harbour.Space has partnered with SCG to empower driven talent and eliminate the barriers
-                    to accessing exceptional education and career opportunities through a Masters Fellowship.</p>
+                <p class="intro-left-paragraph">{{ description }}</p>
             </div>
             
             <div fxLayout="row" class="intro-left-p-div">
-                <p class="intro-left-paragraph"><span>Position:</span> Marketing Performance</p>
+                <p class="intro-left-paragraph"><span>Position:</span> {{ (scholarship$ | async)?.position }}</p>
             </div>
 
             <div fxLayout="row">
@@ -26,7 +25,7 @@
         <div fxLayout="row" class="right-container">
             <div fxLayout="row" class="first-section">
                 <div>
-                <img src="../../../assets/img/Logo.png" alt="">
+                <img [src]="logoSrc" alt="">
                 </div>
                 <div class="first-section-paragraphs">
                     <p class="opac-paragraph">Powered by:</p>
@@ -51,10 +50,10 @@
                 <img src="../../../assets/img/Pattern.png" alt="pattern">
                 <mat-grid-list cols="2" rowHeight="2:1">
                     <mat-grid-tile>
-                        <p><span>Location</span><br> Bangkok</p>
+                        <p><span>Location</span><br> {{ (scholarship$ | async)?.location?.name }}</p>
                     </mat-grid-tile>
                     <mat-grid-tile> 
-                        <p><span>Duration</span><br> 1 Year <br> Full-Time</p>
+                        <p><span>Duration</span><br> {{ (scholarship$ | async)?.duration }} Year <br> Full-Time</p>
                     </mat-grid-tile>
                     <mat-grid-tile>
                         <p><span>Start date</span><br> 30 June 2020</p>

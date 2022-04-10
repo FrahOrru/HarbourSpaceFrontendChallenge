@@ -9,11 +9,7 @@ export interface FrontendChallenge {
 
 export const initialState: FrontendChallenge = {
     loading: false,
-    reactDeveloperApprenticeshipPhazero: {
-        scholarship: {
-            
-        }
-    } as ApprenticeshipPhazero,
+    reactDeveloperApprenticeshipPhazero: {} as ApprenticeshipPhazero,
 }
 
 export const frontendChallengeReducer: ActionReducer<FrontendChallenge> = createReducer(
