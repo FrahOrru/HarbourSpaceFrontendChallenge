@@ -24,6 +24,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import {MatMenuModule} from '@angular/material/menu';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ app: frontendChallengeReducer}),
+    StoreModule.forRoot({app: frontendChallengeReducer}),
     EffectsModule.forRoot([FrontendChallengeEffects]),
     BrowserModule,
     HttpClientModule,
@@ -51,7 +53,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatExpansionModule,
     MatSelectModule,
-    MatMenuModule
+    MatMenuModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

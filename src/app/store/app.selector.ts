@@ -1,11 +1,13 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store"
 import { FrontendChallenge } from './app.reducer';
 
+export interface AppState {
+    frontendChallenge: FrontendChallenge;
+}
 
-
-export const getAppState = (state: FrontendChallenge) => state;
+export const selectFeature = (state: AppState) => state.frontendChallenge;
 
 export const getReactDeveloperApprenticeshipPhazero = createSelector(
-    getAppState,
+    selectFeature,
     (state: FrontendChallenge) => state.reactDeveloperApprenticeshipPhazero
 )
