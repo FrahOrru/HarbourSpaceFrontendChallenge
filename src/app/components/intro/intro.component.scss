@@ -4,7 +4,7 @@ mat-grid-tile {
 }
 
 .left-container {
-    margin-left: 200px;
+    margin-left: 20%;
     
     .left-icon {
         position: absolute;
@@ -188,6 +188,45 @@ mat-grid-tile {
             top: 65%;
             z-index: 0;
             border: 1px solid #E6E6E6;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .left-container {
+         margin: 0 10% 0 10%;
+
+        .left-icon {
+            left: 65%;
+            top: 22%;
+        }
+    }
+
+    .right-container{
+        margin-bottom: 30%;
+
+
+        .count-down {
+            width: 700px;
+        }
+
+        .info-section {
+            width: 700px;
+
+            mat-grid-tile {
+
+                p {
+                    font-size: 20px;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            img {
+                display: none;
+            }
         }
     }
 }

@@ -7,7 +7,6 @@ html, body { height: 100%; overflow-x: hidden; }
 body { margin: 0; font-family: Apercu Pro; background-color: white;}
 
 .owl-carousel .owl-item{
-    width: 950px !important;
     margin: 10px;
     justify-content: center!important;
 }
@@ -44,4 +43,10 @@ body { margin: 0; font-family: Apercu Pro; background-color: white;}
 
 .mat-expansion-panel {
     box-shadow: none!important;
+}
+
+@media (min-width: 1200px) {
+    .owl-carousel .owl-item{
+        width: 950px !important;
+    }
 }

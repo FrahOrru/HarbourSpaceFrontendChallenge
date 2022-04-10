@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, HostListener } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { on, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -13,14 +13,17 @@ import { AppState } from '../../store/app.state';
 export class FaqComponent implements OnInit {
   panelOpenState = false;
   dropdownOpen = false;
-  selectedPath = 'prova';
-  selectionForm: FormGroup = new FormGroup({
-    typeSelection: new FormControl(1)
-  });
   public faq$: Observable<any>;
+  
+  public screenHeight: any;
+  public screenWidth: any;
+
+  public gridCols = 2;
+  public gridRowsHeight = '300px';
 
   constructor(private render: Renderer2,
               private _store: Store<AppState>) {
+                this.onResize();
                 this.faq$ = this._store.select(getFaq);
               }
 
@@ -45,5 +48,17 @@ export class FaqComponent implements OnInit {
     this.dropdownOpen = !this.dropdownOpen;
     (document.getElementById('myDropdown') as HTMLFormElement).classList.toggle("show");
     (document.getElementById('dropbtn') as HTMLFormElement).classList.toggle("opened");
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event?: any) {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth < 1100) {
+      this.gridCols = 1;
+      this.gridRowsHeight = '150px'
+    } else {
+      this.gridCols = 2;
+    }
   }
 }
