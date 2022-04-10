@@ -127,8 +127,20 @@ mat-grid-tile {
     margin: 100px 150px 100px 150px;
 
     mat-expansion-panel-header {
+
+        mat-panel-title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 32px;
+
+            letter-spacing: -0.33px;
+
+            color: #685DC5;
+        }
+
         &:hover {
-            background-color: #fff!important;
+            background-color: #fff !important;
         }
     }
 
@@ -211,6 +223,27 @@ mat-grid-tile {
 
     mat-divider {
         margin-top: 3%;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .example-card {
+        width: 700px;
+    }
+
+    .slide-cards-component {
+        .pattern-carousel {
+            position: absolute;
+            top: -10%;
+            left: 0;
+        }
+    }
+
+    .accordion-pannel {
+        .pannel-content-text {
+            padding: 10% 10% 4% 2%;
+        }
     }
 
 }
